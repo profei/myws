@@ -25,7 +25,15 @@ Proxy:
     port: 443
     password: 880820
     skip-cert-verify: true
-  - name: 解锁
+  - name: 解锁jp
+    type: http
+    server: trojan.profei.net
+    port: 9005
+  - name: 解锁hk
+    type: http
+    server: trhk.profei.net
+    port: 9005
+  - name: 解锁ss
     type: ss
     server: music.desperadoj.com
     port: 30001
@@ -38,11 +46,12 @@ Proxy Group:
       - DIRECT
       - mytrjp
       - mytrhk
-      - 网易云音乐
   - name: 网易云音乐
     type: select
     proxies:
-      - 解锁
+      - 解锁jp
+      - 解锁hk
+      - 解锁ss
       - DIRECT
   - name: Netflix等国外流媒体
     type: select
@@ -569,12 +578,17 @@ Rule:
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,17.0.0.0/8,DIRECT
   - IP-CIDR,100.64.0.0/10,DIRECT
+  - DOMAIN-SUFFIX,p4.music.126.net,网易云音乐
+  - DOMAIN-SUFFIX,web.push.126.net,网易云音乐
+  - DOMAIN-SUFFIX,p3.music.126.net,网易云音乐
+  - DOMAIN-SUFFIX,p2.music.126.net,网易云音乐
+  - DOMAIN-SUFFIX,p1.music.126.net,网易云音乐
+  - DOMAIN-SUFFIX,music.163.com,网易云音乐
   - DOMAIN,api.iplay.163.com,网易云音乐
   - DOMAIN,apm3.music.163.com,网易云音乐
   - DOMAIN,apm.music.163.com,网易云音乐
   - DOMAIN,interface3.music.163.com,网易云音乐
   - DOMAIN,interface.music.163.com,网易云音乐
-  - DOMAIN,music.163.com,网易云音乐
   - IP-CIDR,39.105.63.80/32,网易云音乐
   - IP-CIDR,45.254.48.1/32,网易云音乐
   - IP-CIDR,47.100.127.239/32,网易云音乐
