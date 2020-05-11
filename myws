@@ -30,7 +30,7 @@ Proxy:
     server: music.desperadoj.com
     port: 30001
     cipher: aes-128-gcm
-    password: desperadoj.com
+    password: desperadoj.com_free_proxy_gt5i
 Proxy Group:
   - name: Proxy
     type: select
