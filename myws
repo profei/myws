@@ -27,10 +27,10 @@ Proxy:
     skip-cert-verify: true
   - name: 解锁
     type: ss
-    server: music.desperadoj.com
-    port: 30001
-    cipher: aes-128-gcm
-    password: desperadoj.com_free_proxy_gt5i
+    server: 39.105.182.21
+    port: 18888
+    cipher: chacha20-ietf
+    password: music
 Proxy Group:
   - name: Proxy
     type: select
