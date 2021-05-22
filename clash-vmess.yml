@@ -75,7 +75,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🌏 oracle
-	  
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
