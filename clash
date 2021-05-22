@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🌏 v1|亚洲|C|混合负载|视频主力, server: k3.flythere.xyz, port: 41321, type: vmess, uuid: 25d65903-7a6b-db16-3340-902c6c1350b3, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /61747d7266756370206c7775, ws-headers: {Host: k3.flythere.xyz}}
+  - {name: 🌏 v1|亚洲|C|混合负载|视频主力, server: xray.profei.xyz, port: 9876, type: vmess, uuid: 3397faef-43bf-45d1-9748-1504d788051f, alterId: 64, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: xray.profei.xyz}}
   - {name: 🌏 v1|亚洲|B|混合负载|低延主力, server: k2.flythere.xyz, port: 41321, type: vmess, uuid: 25d65903-7a6b-db16-3340-902c6c1350b3, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /61747d7266756370206c7975, ws-headers: {Host: k2.flythere.xyz}}
   - {name: 🌏 v1|亚洲|A|混合负载|外贸主力, server: k1.flythere.xyz, port: 41321, type: vmess, uuid: 25d65903-7a6b-db16-3340-902c6c1350b3, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /61747d7266756370206c7875, ws-headers: {Host: k1.flythere.xyz}}
   - {name: 🇨🇳 v1|香港|A|5台负载, server: k1.flythere.xyz, port: 41321, type: vmess, uuid: 25d65903-7a6b-db16-3340-902c6c1350b3, alterId: 0, cipher: auto, tls: false, network: ws, ws-path: /61747d7266756370206c7b7d, ws-headers: {Host: k1.flythere.xyz}}
