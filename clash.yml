@@ -7,6 +7,8 @@ external-controller: :9090
 proxies:
   - {name: 🌏 oracle, server: xray.profei.xyz, port: 9876, type: vmess, uuid: 3397faef-43bf-45d1-9748-1504d788051f, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /}
   - {name: arm, server: 104.22.76.218, port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, cipher: auto, tls: true, network: ws, ws-path: /ea70d/, ws-headers: {Host: arm.profei.workers.dev}}
+  - {name: arm2, server: 104.22.76.218, port: 443, type: vmess, uuid: 45a06d4b-2d28-335e-9fb1-4b0ac6b9829b, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ea70d/, ws-headers: {Host: arm.profei.workers.dev}}
+  - {name: xray, server: arm.profei.xyz, port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, cipher: auto, tls: true, skip-cert-verify: false, network: tcp, flow: xtls-rprx-direct }
 proxy-groups:
   - name: 🚀 节点选择
     type: select
