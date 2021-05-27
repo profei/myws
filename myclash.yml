@@ -16,7 +16,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🌏 oracle
-      - arm
+      - arm1
       - arm2
       - xray
   - name: ♻️ 自动选择
@@ -26,7 +26,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🌏 oracle
-      - arm
+      - arm1
+      - arm2
+      - xray
   - name: 🌍 国外媒体
     type: select
     proxies:
