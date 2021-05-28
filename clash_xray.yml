@@ -5,17 +5,18 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🌏 oracle, server: xray.profei.xyz, port: 9876, type: vmess, uuid: 3397faef-43bf-45d1-9748-1504d788051f, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /}
-  - {name: arm1, server: 104.22.76.218 , port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, cipher: auto, tls: true, network: ws, ws-path: /ea70d/, ws-headers: {Host: arm.profei.workers.dev}}
-  - {name: arm2, server: 104.20.158.145, port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, cipher: auto, tls: true, network: ws, ws-path: /ea70d/, ws-headers: {Host: arm.profei.workers.dev}}
-  - {name: xray, server: arm.profei.xyz, port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, tls: true, network: tcp, flow: xtls-rprx-direct }
+  - {name: arm_v2ray, server: xray.profei.xyz, port: 37689, type: vmess, uuid: 627ab0e0-d1d5-4489-845b-6178a0021b57, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /xray}
+  - {name: v2ray_cdn1, server: 104.22.76.218, port: 37689, type: vmess, uuid: 627ab0e0-d1d5-4489-845b-6178a0021b57, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /xray, ws-headers: {Host: arm_v2ray.profei.workers.dev}}
+  - {name: v2ray_cdn2, server: 104.20.158.145, port: 37689, type: vmess, uuid: 627ab0e0-d1d5-4489-845b-6178a0021b57, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /xray, ws-headers: {Host: arm_v2ray.profei.workers.dev}}
+  - {name: arm_xray, server: arm.profei.xyz, port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, tls: true, network: tcp, flow: xtls-rprx-direct }
+  - {name: xray_cdn1, server: 104.20.0.251 , port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, cipher: auto, tls: true, network: ws, ws-path: /ea70d/, ws-headers: {Host: arm_xray.profei.workers.dev}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🌏 oracle
+      - arm_v2ray
       - arm1
       - arm2
       - xray
@@ -25,7 +26,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🌏 oracle
+      - arm_v2ray
       - arm1
       - arm2
       - xray
@@ -35,32 +36,32 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🌏 oracle
+      - arm_v2ray
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🌏 oracle
+      - arm_v2ray
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🌏 oracle
+      - arm_v2ray
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🌏 oracle
+      - arm_v2ray
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🌏 oracle
+      - arm_v2ray
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -83,7 +84,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🌏 oracle
+      - arm_v2ray
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
