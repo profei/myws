@@ -17,9 +17,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - arm_v2ray
-      - arm1
-      - arm2
-      - xray
+      - v2ray_cdn1
+      - v2ray_cdn2
+      - arm_xray
+      - xray_cdn1
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -27,9 +28,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - arm_v2ray
-      - arm1
-      - arm2
-      - xray
+      - v2ray_cdn1
+      - v2ray_cdn2
+      - arm_xray
+      - xray_cdn1
   - name: 🌍 国外媒体
     type: select
     proxies:
