@@ -22,6 +22,7 @@ proxy-groups:
       - v2ray_cdn2
       - arm_xray
       - xray_cdn1
+      - gcp_jp
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -33,6 +34,7 @@ proxy-groups:
       - v2ray_cdn2
       - arm_xray
       - xray_cdn1
+      - gcp_jp
   - name: 🌍 国外媒体
     type: select
     proxies:
