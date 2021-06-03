@@ -1,1 +1,4 @@
-dHJvamFuOi8vYmZvd2dhMDgyMEB4cmF5LnByb2ZlaS54eXo6NDQzI29yYWNsZQ0K
+vless://dde29a41-ad9d-d828-7e94-dab72de5c172@jp.profei.xyz:443?flow=xtls-rprx-direct&encryption=none&security=xtls&type=tcp&headerType=none&host=jp.profei.xyz#gcp_jp
+vless://c5b47458-2a11-4827-9bca-eb08f9b803fe@104.26.11.51:443?encryption=none&security=tls&type=ws&host=withered-sun-27e9.profei.workers.dev&path=c5b47458-2a11-4827-9bca-eb08f9b803fe-vless#heroku
+vless://ccbe0015-30b0-4e1f-9cf0-99b260703eee@104.20.158.145:443?encryption=none&security=tls&type=ws&host=arm_xray.profei.workers.dev&path=%2fea70d%2f#oracle_arm
+trojan://19880820@xray.profei.xyz:44986#oracle_xray
