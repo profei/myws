@@ -10,8 +10,7 @@ proxies:
   - {name: v2ray_cdn2, server: 104.20.158.145, port: 443, type: vmess, uuid: 627ab0e0-d1d5-4489-845b-6178a0021b57, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /xray, ws-headers: {Host: arm_v2ray.profei.workers.dev}}
   - {name: arm_xray, server: arm.profei.xyz, port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, tls: true, network: tcp, flow: xtls-rprx-direct }
   - {name: xray_cdn1, server: 104.20.0.251 , port: 443, type: vless, uuid: ccbe0015-30b0-4e1f-9cf0-99b260703eee, cipher: auto, tls: true, network: ws, ws-path: /ea70d/, ws-headers: {Host: arm_xray.profei.workers.dev}}
-  - {name: gcp_jp, server: jp.profei.xyz, port: 443, type: vless, uuid: dde29a41-ad9d-d828-7e94-dab72de5c172, tls: true, network: tcp, flow: xtls-rprx-direct }
-  - {name: gcp_us, server: us.profei.xyz, port: 443, type: vless, uuid: 68858cac-da34-479d-b633-a5a2f69532e9, tls: true, network: tcp, flow: xtls-rprx-direct }
+  - {name: gcp_jp, server: tw.profei.xyz, port: 443, type: vless, uuid: e9b60f0c-7127-46b8-9c2d-5d01128f6ca4, tls: true, network: tcp, flow: xtls-rprx-direct }
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -24,7 +23,6 @@ proxy-groups:
       - arm_xray
       - xray_cdn1
       - gcp_jp
-      - gcp_us
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -37,7 +35,6 @@ proxy-groups:
       - arm_xray
       - xray_cdn1
       - gcp_jp
-      - gcp_us
   - name: 🌍 国外媒体
     type: select
     proxies:
