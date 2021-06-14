@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: oracle_study, server: study.profei.xyz, port: 443, type: vless, uuid: 1396b031-118c-4eb0-9b64-3e2fe0dff971, tls: true, network: tcp, flow: xtls-rprx-direct }
+  - {name: oracle_study, server: ss.profeix.eu.org, port: 25196, type: vless, uuid: 1396b031-118c-4eb0-9b64-3e2fe0dff971, tls: true, network: tcp, flow: xtls-rprx-direct }
   - {name: gcp_jp, server: tw.profei.xyz, port: 443, type: vless, uuid: e9b60f0c-7127-46b8-9c2d-5d01128f6ca4, tls: true, network: tcp, flow: xtls-rprx-direct }
 proxy-groups:
   - name: 🚀 节点选择
