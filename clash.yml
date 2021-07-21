@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: oracle, server: ss.profeix.eu.org, port: 25196, type: vless, uuid: e9b60f0c-7127-46b8-9c2d-5d01128f6ca4, tls: true, network: tcp, flow: xtls-rprx-direct }
+  -  {name: oracle, server: ss.profeix.eu.org, port: 34464, type: trojan, password: AqGOVaRAuB, sni: ss.profeix.eu.org}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
