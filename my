@@ -1,4 +1,1 @@
 trojan://AqGOVaRAuB@ss.profeix.eu.org:34464#game
-vless://e9b60f0c-7127-46b8-9c2d-5d01128f6ca4@tw.profei.xyz:443?flow=xtls-rprx-direct&encryption=none&security=xtls&type=tcp&headerType=none#gcp_tw
-vless://c5b47458-2a11-4827-9bca-eb08f9b803fe@104.26.11.51:443?encryption=none&security=tls&type=ws&host=withered-sun-27e9.profei.workers.dev&path=c5b47458-2a11-4827-9bca-eb08f9b803fe-vless#heroku
-vless://e9b60f0c-7127-46b8-9c2d-5d01128f6ca4@ss.profeix.eu.org:25196?type=tcp&security=xtls&sni=ss.profeix.eu.org&flow=xtls-rprx-direct#xray
