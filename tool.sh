@@ -1,17 +1,9 @@
 #!/bin/bash
 
-# RED='\033[0;31m'
-# GREEN='\033[0;32m'
-# YELLOW='\033[0;33m'
-# SKYBLUE='\033[0;36m'
-# PLAIN='\033[0m'
-
 green(){
     echo -e "\033[32m\033[01m$1\033[0m"
 }
-Tip(){
-    echo -e "\033[32m\033[01m$1\033[0m"
-}
+
 [[ $(id -u) != 0 ]] && green "执行sudo su切换root用户执行脚本" && exit 1
 
 green 1.更改root模式登录
@@ -31,12 +23,12 @@ if [[ $(echo ${yn}|grep 3) != "" ]];
 then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/bbr_opt.sh);fi;
 
 if [[ $(echo ${yn}|grep 11) != "" ]];
-then bash <(curl -s https://raw.githubusercontent.com/mslxi/mslx/main/python3.10.2);fi;
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/python3.10.2);fi;
 if [[ $(echo ${yn}|grep 12) != "" ]];
-then bash <(curl -s https://raw.githubusercontent.com/mslxi/mslx/main/docker);fi;
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/docker);fi;
 if [[ $(echo ${yn}|grep 13) != "" ]];
-then bash <(curl -s https://raw.githubusercontent.com/mslxi/mslx/main/go);fi;
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/go);fi;
 if [[ $(echo ${yn}|grep 14) != "" ]];
-then bash <(curl -s https://raw.githubusercontent.com/mslxi/mslx/main/nodejs);fi;
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/nodejs);fi;
 if [[ $(echo ${yn}|grep 15) != "" ]];
-then bash <(curl -s https://raw.githubusercontent.com/mslxi/mslx/main/speedtest);fi;
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/speedtest);fi;
