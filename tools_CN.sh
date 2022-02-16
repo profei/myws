@@ -73,8 +73,8 @@ menu() {
 			bash <(curl -s https://ghproxy.com/https://raw.githubusercontent.com/profei/myws/master/nodejs)
 			;;		
 		esac
-	}
-
+}
+echoType='echo -e'
 menu
 
 
