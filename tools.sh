@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export LANG=en_US.UTF-8
 echoContent() {
 	case $1 in
 	# 红色
