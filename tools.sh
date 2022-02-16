@@ -70,9 +70,6 @@ menu() {
 			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/nodejs)
 			;;		
 		esac
-	}
+}
+echoType='echo -e'
 menu
-
-
-
-
