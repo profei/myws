@@ -17,13 +17,19 @@ Tip(){
 green 1.更改root模式登录
 green 2.一键编译安装BBR(选11)
 green 3.BBR网络优化(先2后3)
-
 green 11.一键编译安装Python3.10.2环境
 green 12.一键安装docker
 green 13.一键安装GoLang环境
 green 14.一键安装nodejs环境
 green 15.speedtest测速
 read -p "请输入序号: " yn;
+if [[ $(echo ${yn}|grep 1) != "" ]];
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/root.sh);fi;
+if [[ $(echo ${yn}|grep 2) != "" ]];
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/bbr.sh);fi;
+if [[ $(echo ${yn}|grep 3) != "" ]];
+then bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/bbr_opt.sh);fi;
+
 if [[ $(echo ${yn}|grep 11) != "" ]];
 then bash <(curl -s https://raw.githubusercontent.com/mslxi/mslx/main/python3.10.2);fi;
 if [[ $(echo ${yn}|grep 12) != "" ]];

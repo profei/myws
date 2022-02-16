@@ -1,0 +1,14 @@
+#!/bin/bash
+B=bash_completion
+A=apt
+d=docker
+D=docker-compose
+a=armv7
+if [[ $(uname -a | grep "x86_64") != "" ]]; then a=x86_64; fi
+if [[ $(uname -a | grep "s390x") != "" ]]; then a=s390x; fi
+curl -fsSL https://get.$d.com | bash -s $d
+wget "https://github.com/$d/compose/releases/download/v2.2.3/$D-linux-$a" -O /usr/local/bin/$D
+chmod +x /usr/local/bin/$D
+$A update -y
+$A install -y $B
+source /usr/share/$B/$B
