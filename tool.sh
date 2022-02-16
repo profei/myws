@@ -1,5 +1,4 @@
 #!/bin/bash
-
 green(){
     echo -e "\033[32m\033[01m$1\033[0m"
 }
@@ -7,8 +6,8 @@ green(){
 [[ $(id -u) != 0 ]] && green "执行sudo su切换root用户执行脚本" && exit 1
 
 green 1.更改root模式登录
-green 2.一键编译安装BBR(选11)
-green 3.BBR网络优化(先2后3)
+green 2.一键编译安装BBR--选11
+green 3.BBR网络优化--先2后3
 green 11.一键编译安装Python3.10.2环境
 green 12.一键安装docker
 green 13.一键安装GoLang环境
