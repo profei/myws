@@ -64,7 +64,7 @@ menu() {
 			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/docker)
 			;;
 		13)
-			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/go)
+			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/golang)
 			;;
 		14)
 			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/nodejs)
