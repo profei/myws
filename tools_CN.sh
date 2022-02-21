@@ -1,7 +1,5 @@
 #!/bin/bash
-
 export LANG=en_US.UTF-8
-
 echoContent() {
 	case $1 in
 	# 红色
@@ -31,7 +29,6 @@ echoContent() {
 	esac
 }
 menu() {
-	clear
 	[[ $(id -u) != 0 ]] && echoContent white "执行sudo su切换root用户执行脚本" && exit 1
 	echoContent red "\n=============================================================="
 	echoContent green "自用工具脚本"
