@@ -49,7 +49,7 @@ menu() {
 			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/root.sh)
 			;;
 		2)
-			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/bbr_opt.sh)
+			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/bbr.sh)
 			;;
 		3)
 			bash <(curl -s https://raw.githubusercontent.com/profei/myws/master/bbr_opt.sh)
