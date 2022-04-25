@@ -8,12 +8,9 @@ proxies:
   -
     name: '新加坡'
     type: trojan
-    server: dev.profei.cf
-    port: 443
-    password: af56ccf9-8024-447d-90a8-a0c660017736
-    alpn: 
-        - h2
-        - http/1.1
+    server: sg.profei.cf
+    port: 21583
+    password: kqSQR67mmW
 
 proxy-groups:
   -
