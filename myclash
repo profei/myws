@@ -9,9 +9,10 @@ proxies:
     name: '新加坡'
     type: trojan
     server: sg.profei.cf
-    port: 21583
-    password: kqSQR67mmW
-
+    port: 443
+    password: 18fab393-a4ae-4000-8f7f-4a2c01ff1aaf
+    skip-cert-verify: false
+    
 proxy-groups:
   -
     name: '🍃 Proxies'
