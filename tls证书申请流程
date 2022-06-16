@@ -10,3 +10,6 @@ curl https://get.acme.sh | sh
 
 ##下载证书及密钥##
 ~/.acme.sh/acme.sh --installcert -d 你的域名 --key-file /root/private.key --fullchain-file /root/cert.crt --ecc
+
+强制更新证书
+~/.acme.sh/acme.sh --renew -f -d 域名
