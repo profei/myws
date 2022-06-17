@@ -13,3 +13,9 @@ curl https://get.acme.sh | sh
 
 强制更新证书
 ~/.acme.sh/acme.sh --renew -f -d 域名
+
+
+
+腾讯云申请  1年有效期
+下载nginx版
+使用crt 和 key文件
