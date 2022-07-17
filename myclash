@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇸🇬 sg.profei.cf_vmess_ws, server: sg.profei.cf, port: 443, type: vmess, uuid: 18fab393-a4ae-4000-8f7f-4a2c01ff1aaf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /kiqtvws, headers: {Host: sg.profei.cf}}}
+  - {name: 🇸🇬 sg.profei.cf_vmess_ws, server: sg.profei.cf, port: 443, type: vmess, uuid: ac9609da-bc6d-4ed1-802a-26e15cb22adf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: sg.profei.cf}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
