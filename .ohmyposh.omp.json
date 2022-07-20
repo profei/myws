@@ -1,0 +1,98 @@
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"blocks": [
+		{
+			"alignment": "left",
+			"newline": true,
+			"segments": [
+				{
+					"foreground": "#3A86FF",
+					"style": "plain",
+					"template": " ",
+					"type": "os"
+				},
+				{
+					"background": "#01579B",
+					"foreground": "#ffffff",
+					"leading_diamond": "<transparent,#01579B></>",
+					"properties": {
+						"folder_icon": "",
+						"folder_separator_icon": "<transparent>  </>",
+						"home_icon": "",
+						"style": "agnoster_short"
+					},
+					"style": "diamond",
+					"template": " {{ path .Path .Location }} ",
+					"trailing_diamond": "",
+					"type": "path"
+				},
+				{
+					"background": "#00C853",
+					"background_templates": [
+						"{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+						"{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+						"{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+						"{{ if gt .Behind 0 }}#B388FF{{ end }}"
+					],
+					"foreground": "#000000",
+					"powerline_symbol": "",
+					"properties": {
+						"fetch_stash_count": true,
+						"fetch_status": true
+					},
+					"style": "powerline",
+					"template": " {{ .HEAD }}{{ if .Staging.Changed }}<#FF6F00>  {{ .Staging.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} ",
+					"type": "git"
+				},
+				{
+					"background": "#007800",
+					"background_templates": [
+						"{{ if gt .Code 0 }}#f1184c{{ end }}"
+					],
+					"foreground": "#ffffff",
+					"leading_diamond": "<transparent,background></>",
+					"properties": {
+						"style": "roundrock",
+						"threshold": 0,
+						"always_enabled": true
+					},
+					"style": "diamond",
+					"template": " {{ .FormattedMs }} ",
+					"trailing_diamond": "",
+					"type": "executiontime"
+				}
+			],
+			"type": "prompt"
+		},
+		{
+			"segments": [
+				{
+					"foreground": "#A9FFB4",
+					"invert_powerline": true,
+					"properties": {
+						"time_format": "15:04"
+					},
+					"style": "plain",
+					"template": "{{ .CurrentDate | date .Format }} ",
+					"type": "time"
+				}
+			],
+			"type": "rprompt"
+		},
+		{
+			"alignment": "left",
+			"newline": true,
+			"segments": [
+				{
+					"foreground": "#007ACC",
+					"style": "plain",
+					"template": "➜ ",
+					"type": "text"
+				}
+			],
+			"type": "prompt"
+		}
+	],
+	"final_space": true,
+	"version": 2
+}
