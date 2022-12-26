@@ -1,2 +1,37 @@
+管理员启动终端安装
+
+# oh-my-posh
+winget install JanDeDobbeleer.OhMyPosh -s winget
+
+# 下载字体
+https://github.com/ryanoasis/nerd-fonts
+JetBrainsMono.zip
+Meslo.zip
+
+# PSReadLine 
+Install-Module -Name PSReadLine -Scope CurrentUser -Force
+
+# posh-git
+Install-Module posh-git -Scope CurrentUser -Force
+
+终端下 按 CTRL + SHIFT + ,
+找defaults替换
+{
+    "profiles":
+    {
+        "defaults":
+        {
+            "font":
+            {
+                "face": "MesloLGM NF"
+            }
+        }
+    }
+}
+
+
+
+
+应用主题
 notepad $PROFILE  替换内容为profei文件内容
 profei文件最后一行替换主题路径
