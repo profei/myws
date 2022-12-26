@@ -29,6 +29,8 @@ Install-Module posh-git -Scope CurrentUser -Force
     }
 }
 
+禁止终端提示更新
+环境变量添加POWERSHELL_UPDATECHECK  off
 
 
 
