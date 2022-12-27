@@ -15,12 +15,16 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -28,6 +32,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
   - name: 📲 电报信息
     type: select
     proxies:
@@ -40,6 +46,8 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -53,6 +61,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -76,6 +86,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
