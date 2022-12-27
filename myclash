@@ -5,52 +5,54 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇸🇬 sg.profei.cf_vmess_ws, server: sg.profei.cf, port: 443, type: vmess, uuid: ac9609da-bc6d-4ed1-802a-26e15cb22adf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: sg.profei.cf}}}
+  - {name: 🇸🇬 sg, server: sg.profei.cf, port: 443, type: vmess, uuid: ac9609da-bc6d-4ed1-802a-26e15cb22adf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: sg.profei.cf}}}
+  - {name: 🇰🇷 kr, server: npm.profei.cf, port: 443, type: vmess, uuid: 9be959c1-5ea8-4ba9-ffdb-08bd05fdccd9, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: npm.profei.cf}}}
+  - {name: 🇺🇸 gcm, gcm.profei.repl.co, port: 443, type: vmess, uuid: 114cf8fb-3a91-c905-cf59-2a2a14a0a31d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /vmess, headers: {Host: gcm.profei.repl.co}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,7 +75,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇸🇬 sg.profei.cf_vmess_ws
+      - 🇸🇬 sg
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
