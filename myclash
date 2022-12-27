@@ -5,9 +5,9 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇸🇬 sg, server: sg.profei.cf, port: 443, type: vmess, uuid: ac9609da-bc6d-4ed1-802a-26e15cb22adf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: sg.profei.cf}}}
-  - {name: 🇰🇷 kr, server: npm.profei.cf, port: 443, type: vmess, uuid: 9be959c1-5ea8-4ba9-ffdb-08bd05fdccd9, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: npm.profei.cf}}}
-  - {name: 🇺🇸 gcm, gcm.profei.repl.co, port: 443, type: vmess, uuid: 114cf8fb-3a91-c905-cf59-2a2a14a0a31d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /vmess, headers: {Host: gcm.profei.repl.co}}}
+  - {name: 🇸🇬 sg, server: sg.profei.cf,       port: 443, type: vmess, uuid: ac9609da-bc6d-4ed1-802a-26e15cb22adf, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: sg.profei.cf}}}
+  - {name: 🇰🇷 kr, server: npm.profei.cf,      port: 443, type: vmess, uuid: 9be959c1-5ea8-4ba9-ffdb-08bd05fdccd9, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /profei, headers: {Host: npm.profei.cf}}}
+  - {name: 🇺🇸 gcm,server: gcm.profei.repl.co, port: 443, type: vmess, uuid: 114cf8fb-3a91-c905-cf59-2a2a14a0a31d, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /vmess, headers: {Host: gcm.profei.repl.co}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -40,6 +40,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -54,6 +56,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 🇸🇬 sg
+      - 🇰🇷 kr
+      - 🇺🇸 gcm
   - name: 📢 谷歌FCM
     type: select
     proxies:
