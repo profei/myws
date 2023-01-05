@@ -22,8 +22,8 @@ proxies:
 
 proxy-groups:
     - { name: PROXY, type: select, proxies: [自动选择, 故障转移, '🇸🇬 sg','🇰🇷 kr','🇺🇸 gcm'] }
-    - { name: 自动选择, type: url-test, proxies: ['🇸🇬 sg','🇰🇷 kr','🇺🇸 gcm'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['🇸🇬 sg','🇰🇷 kr','🇺🇸 gcm'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 自动选择, type: url-test, proxies: ['🇸🇬 sg','🇰🇷 kr','🇺🇸 gcm'], url: 'http://www.apple.com/library/test/success.html', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['🇸🇬 sg','🇰🇷 kr','🇺🇸 gcm'], url: 'http://www.apple.com/library/test/success.html', interval: 7200 }
     
 rule-providers:
   reject:
