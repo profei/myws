@@ -1,0 +1,9 @@
+# Port of HTTP(S) proxy server on the local end
+port: 7890
+
+proxies:
+  # socks5
+  - name: "socks"
+    type: socks5
+    server: 192.168.31.2
+    port: 10808
