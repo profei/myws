@@ -1,0 +1,16 @@
+# Port of HTTP(S) proxy server on the local end
+port: 7890
+mode: global
+proxies:
+  # socks5
+  - name: "socks"
+    type: socks5
+    server: 192.168.31.2
+    port: 10808
+proxy-groups:
+  # relay chains the proxies. proxies shall not contain a relay. No UDP support.
+  # Traffic: clash <-> http <-> vmess <-> ss1 <-> ss2 <-> Internet
+  - name: "relay"
+    type: select
+    proxies:
+      - socks
