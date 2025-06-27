@@ -46,7 +46,8 @@ function openProxy {
     $proxy = "http://127.0.0.1:10808"
     $env:http_proxy = $proxy
     $env:https_proxy = $proxy
-    Write-Host "Proxy has been opened."
+    $env:no_proxy = "localhost,127.0.0.1,::1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
+    Write-Host "Proxy has been opened with local and LAN bypass."
 }
 
 function noProxy {
